@@ -1,1 +1,2 @@
-import './js/task';
+import './js/Character';
+import './js/Team';
