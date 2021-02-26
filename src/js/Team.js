@@ -4,7 +4,9 @@ class Team {
   }
 
   add(member) {
-    const isExists = [...this.members].some((el) => el.name === member.name);
+    const isExists = [...this.members].some((el) =>
+      Object.values(el).every((value) => Object.values(member).includes(value))
+    );
     if (isExists) {
       throw new Error('Этот персонаж уже в команде');
     }
